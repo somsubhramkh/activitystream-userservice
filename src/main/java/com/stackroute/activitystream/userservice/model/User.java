@@ -4,9 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.hateoas.ResourceSupport;
+
 @Entity
 @Table(name="user")
-public class User {
+public class User extends ResourceSupport{
 	@Id
 	private String email;
 	private String username;
